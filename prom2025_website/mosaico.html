@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prom 2025</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0026ff;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    header img {
+      max-width: 120px;
+      height: auto;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    h1 {
+      text-align: center;
+      color: #fbff00;
+    }
+    .docente {
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #34495e;
+    }
+    .docente img {
+      width: 140px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .estudiante {
+      text-align: center;
+      background: rgb(14, 235, 187);
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .estudiante img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .nombre {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .modal-content {
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+    }
+    .modal-content img {
+      width: 150px;
+      border-radius: 50%;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="escudo.png" alt="Escudo del colegio" onclick="openModal('Escudo del colegio', 'escudo.png', 'Símbolo institucional que representa los valores de nuestro colegio.')"/>
+    <h1>Esta es la PROM 2025</h1>
+  </header>
+
+  <div class="docente">
+    <img src="yudisolis.png" alt="Yudi Solis Moreno" onclick="openModal('Yudi Solis Moreno', 'yudisolis.png', 'Directora de grupo comprometida con el crecimiento de sus estudiantes.')">
+    <div><strong>Directora:</strong> Yudi Solis Moreno</div>
+  </div>
+
+  <div class="grid">
+    <!-- Lista completa de estudiantes -->
+    <div class="estudiante"><img src="cristian.png" alt="Cristian Chavarria" onclick="openModal('Cristian Chavarria', 'cristian.png', 'Responsable y apasionado por la tecnología.')"><div class="nombre">Cristian Chavarria</div></div>
+    <div class="estudiante"><img src="manuela.png" alt="Manuela Lopez" onclick="openModal('Manuela Lopez', 'manuela.png', 'Creativa, dedicada y siempre con una sonrisa.')"><div class="nombre">Manuela Lopez</div></div>
+    <div class="estudiante"><img src="juan.png" alt="Juan Camilo Chavarria" onclick="openModal('Juan Camilo Chavarria', 'juan.png', 'Líder natural con gran sentido del humor.')"><div class="nombre">Juan Camilo Chavarria</div></div>
+    <div class="estudiante"><img src="yoberman.png" alt="Yoberman Correa" onclick="openModal('Yoberman Correa', 'yoberman.png', 'Amigable, respetuoso y solidario.')"><div class="nombre">Yoberman Correa</div></div>
+    <div class="estudiante"><img src="yudyzapata.png" alt="Yudy Zapata" onclick="openModal('Yudy Zapata', 'yudyzapata.png', 'Dedicada y ejemplo de constancia.')"><div class="nombre">Yudy Zapata</div></div>
+    <div class="estudiante"><img src="gimena.png" alt="Gimena Benitez" onclick="openModal('Gimena Benitez', 'gimena.png', 'Alegre y comprometida con su aprendizaje.')"><div class="nombre">Gimena Benitez</div></div>
+    <div class="estudiante"><img src="paula.png" alt="Paula Monsalve" onclick="openModal('Paula Monsalve', 'paula.png', 'Estudiosa, carismática y perseverante.')"><div class="nombre">Paula Monsalve</div></div>
+    <div class="estudiante"><img src="sebastian.png" alt="Sebastian Restrepo" onclick="openModal('Sebastian Restrepo', 'sebastian.png', 'Analítico y curioso por el conocimiento.')"><div class="nombre">Sebastian Restrepo</div></div>
+    <div class="estudiante"><img src="fancy.png" alt="Fancy Lopez" onclick="openModal('Fancy Lopez', 'fancy.png', 'Siempre dispuesta a ayudar a los demás.')"><div class="nombre">Fancy Lopez</div></div>
+    <div class="estudiante"><img src="camilo.png" alt="Camilo Echavarria" onclick="openModal('Camilo Echavarria', 'camilo.png', 'Activo y con mucho entusiasmo por aprender.')"><div class="nombre">Camilo Echavarria</div></div>
+    <div class="estudiante"><img src="angely.png" alt="Angely Orrego" onclick="openModal('Angely Orrego', 'angely.png', 'Sensible, honesta y con gran corazón.')"><div class="nombre">Angely Orrego</div></div>
+    <div class="estudiante"><img src="yuranyv.png" alt="Yurany Velez" onclick="openModal('Yurany Velez', 'yuranyv.png', 'Comprometida con sus metas y muy disciplinada.')"><div class="nombre">Yurany Velez</div></div>
+    <div class="estudiante"><img src="yuranyb.png" alt="Yurany Barbaran" onclick="openModal('Yurany Barbaran', 'yuranyb.png', 'Creativa, soñadora y con espíritu artístico.')"><div class="nombre">Yurany Barbaran</div></div>
+    <div class="estudiante"><img src="esneider.png" alt="Esneider Henao" onclick="openModal('Esneider Henao', 'esneider.png', 'Inteligente, perseverante y buen amigo.')"><div class="nombre">Esneider Henao</div></div>
+    <div class="estudiante"><img src="erica.png" alt="Erica Restrepo" onclick="openModal('Erica Restrepo', 'erica.png', 'Tímida pero con grandes habilidades.')"><div class="nombre">Erica Restrepo</div></div>
+    <div class="estudiante"><img src="yesica.png" alt="Yesica Romero" onclick="openModal('Yesica Romero', 'yesica.png', 'Solidaria, entusiasta y siempre positiva.')"><div class="nombre">Yesica Romero</div></div>
+    <div class="estudiante"><img src="yeison.png" alt="Yeison Oquendo" onclick="openModal('Yeison Oquendo', 'yeison.png', 'Leal, buen compañero y trabajador.')"><div class="nombre">Yeison Oquendo</div></div>
+    <div class="estudiante"><img src="veronica.png" alt="Verónica Ocampo" onclick="openModal('Verónica Ocampo', 'veronica.png', 'Respetuosa, dedicada y amable.')"><div class="nombre">Verónica Ocampo</div></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modalImg" src="" alt="Imagen Ampliada">
+      <p id="modalDesc"></p>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(nombre, imagen, descripcion) {
+      document.getElementById('modalImg').src = imagen;
+      document.getElementById('modalDesc').innerText = nombre;
+      document.getElementById('modalText').innerText = descripcion;
+      document.getElementById('myModal').style.display = 'block';
+    }
+    function closeModal() {
+      document.getElementById('myModal').style.display = 'none';
+    }
+    window.onclick = function(event) {
+      const modal = document.getElementById('myModal');
+      if (event.target == modal) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+</html>
